@@ -4,9 +4,9 @@ import './App.scss';
 class App extends React.Component {
   render() {
     return (
-        <div className="app-container">
-        App
-        </div>
+      <div className="app-container">
+      App
+      </div>
     );
   }
 }
