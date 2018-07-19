@@ -1,0 +1,15 @@
+.tile {
+  background: #666688;
+  margin: 5px;
+  color: white;
+  font-size: 12px;
+  flex: 1 0 auto;
+  position: relative;
+
+  &:after {
+    content: "";
+    float: left;
+    display: block;
+    padding-top: 100%;
+  }
+}

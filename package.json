@@ -2,7 +2,7 @@
   "name": "grid-traverse",
   "description": "Grid traversal demo",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "repository": {
     "type": "git",
