@@ -1,5 +1,6 @@
 .tile {
-  background: #666688;
+  border: 1px solid #666666;
+  background-color: #666688;
   margin: 5px;
   color: white;
   font-size: 12px;
@@ -12,4 +13,9 @@
     display: block;
     padding-top: 100%;
   }
+}
+
+.tile-selected {
+  background-color: #FFD700;
+  color: #000000;
 }
