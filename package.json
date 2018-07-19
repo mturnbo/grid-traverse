@@ -1,0 +1,21 @@
+{
+  "name": "grid-traverse",
+  "description": "Grid traversal demo",
+  "author": "Marcus Turnbo <marcus@emarcus.com>",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mturnbo/grid-traverse.git"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0"
+  },
+  "dependencies": {},
+  "scripts": {},
+  "main": "index.js"
+}
