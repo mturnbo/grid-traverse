@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.0.1.4
+* *Feature*: Added Header and Footer components 
+
 #### v.0.1.3
 * *Feature*: Added Grid container
 

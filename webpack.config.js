@@ -4,11 +4,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
+const ASSETS_DIR = path.resolve(__dirname, 'assets');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: APP_DIR + '/index.html',
   filename: 'index.html',
-  inject: 'body'
+  inject: 'body',
+  favicon: 'assets/images/favicon.ico'
 });
 
 module.exports = {
@@ -54,6 +56,11 @@ module.exports = {
     ]
   },
   resolve: {
+    alias: {
+      components: APP_DIR + '/components',
+      containers: APP_DIR + '/containers',
+      assets: ASSETS_DIR
+    },
     extensions: ['.js', '.json', '.jsx']
   }
 };

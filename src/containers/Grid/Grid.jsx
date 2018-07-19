@@ -1,5 +1,5 @@
 import React from 'react';
-import Tile from '../../components/Tile';
+import Tile from 'components/Tile';
 import './Grid.scss';
 import PropTypes from "prop-types";
 
