@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.0.1.7
+* *Feature*: Math Formula component
+
 #### v.0.1.6
 * *Feature*: Dropdown selector for row and column values
 
