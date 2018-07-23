@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.0.1.6
+* *Feature*: Dropdown selector for row and column values
+
 #### v.0.1.5
 * *Feature*: Tile onClick change color behavior
 
