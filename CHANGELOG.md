@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.0.1.8
+* *Feature*: Added Storybook
+
 #### v.0.1.7
 * *Feature*: Math Formula component
 

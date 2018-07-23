@@ -2,13 +2,14 @@
   "name": "grid-traverse",
   "description": "Grid traversal demo",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mturnbo/grid-traverse.git"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.8",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -20,6 +21,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
@@ -40,7 +42,8 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server",
-    "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js ."
+    "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js .",
+    "storybook": "start-storybook -p 9091 -c .storybook"
   },
   "main": "index.jsx"
 }
