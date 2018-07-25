@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.0.1.8
+* *Feature*: Jest for testing 
+
 #### v.0.1.7
 * *Feature*: Math Formula component
 
