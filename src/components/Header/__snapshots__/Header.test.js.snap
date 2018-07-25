@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component Renders 1`] = `
+<Header
+  title="This Is A Test"
+>
+  <header
+    className="app-header"
+  >
+    <h2>
+      This Is A Test
+    </h2>
+  </header>
+</Header>
+`;

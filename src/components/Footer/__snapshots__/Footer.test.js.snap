@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component Renders 1`] = `
+<Footer
+  title="This Is A Test"
+>
+  <footer
+    className="app-footer"
+  >
+    <h2>
+      This Is A Test
+    </h2>
+  </footer>
+</Footer>
+`;

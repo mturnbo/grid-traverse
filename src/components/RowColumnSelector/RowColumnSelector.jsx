@@ -14,7 +14,7 @@ class RowColumnSelector extends React.Component {
 
   render() {
     const generateOptions = [...Array(this.props.size)].map((s, i) =>
-      <option value={i + 1}>{i + 1}</option>
+      <option value={i + 1} key={i}>{i + 1}</option>
     );
 
     return (
