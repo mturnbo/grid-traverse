@@ -1,31 +1,21 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const APP_DIR = path.resolve(__dirname, 'src');
-
-const extractSass = new ExtractTextPlugin({
-  filename: 'styles.css'
-});
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   plugins: [
-    extractSass
+    new MiniCssExtractPlugin({
+      filename: 'styles.css'
+    })
   ],
   module: {
     rules: [
       {
-        test:/\.(s*)css$/,
-        use: extractSass.extract({
-          use: [{
-            loader: "css-loader"
-          }, {
-            loader: "sass-loader",
-            options: {
-              includePaths: [APP_DIR]
-            }
-          }],
-          fallback: 'style-loader'
-        })
+        test: /\.s?[ac]ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
