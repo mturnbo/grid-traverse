@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.0.1.9
+* *Feature*: Save selected tiles in Grid component state
+
 #### v.0.1.8
 * *Feature*: Jest for testing 
 
