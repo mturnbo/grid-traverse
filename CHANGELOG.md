@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.0.2.0
+* *Feature*:  Added Context API
+
 #### v.0.1.9
 * *Feature*: Save selected tiles in Grid component state
 

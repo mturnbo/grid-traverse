@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { GridContext } from '../../context';
 import Tile from 'components/Tile';
 import './Grid.scss';
-import PropTypes from "prop-types";
 
 class Grid extends React.Component {
   constructor(props) {
@@ -39,7 +40,9 @@ class Grid extends React.Component {
 
     return (
       <div className="grid">
-        {[...Array(this.props.rows)].map((r, i) => <div className="row">{generateTiles(i + 1, this.props.cols)}</div>)}
+        <GridContext.Consumer>
+        {context => [...Array(context.rows)].map((r, i) => <div className="row">{generateTiles(i + 1, context.cols)}</div>)}
+        </GridContext.Consumer>
       </div>
     );
   }
