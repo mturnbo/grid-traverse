@@ -1,4 +1,13 @@
 {
-  "presets": ["env", "react"],
+  "presets": [
+    "@babel/react",
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "debug": true
+      }
+    ]
+  ],
   "plugins": ["transform-class-properties"]
 }

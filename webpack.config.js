@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const BUILD_DIR = path.resolve(__dirname, 'public');
+const BUILD_DIR = path.resolve(__dirname, 'dist');
 const APP_DIR = path.resolve(__dirname, 'src');
 const ASSETS_DIR = path.resolve(__dirname, 'assets');
 
@@ -13,8 +13,18 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   favicon: 'assets/images/favicon.ico'
 });
 
+const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
+  filename: 'styles.css'
+});
+
 module.exports = {
   entry: APP_DIR + '/index.js',
+  devtool: 'eval-source-map',
+  devServer: {
+    host: 'localhost',
+    port: 3000,
+    open: true
+  },
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
@@ -22,9 +32,7 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfig,
-    new MiniCssExtractPlugin({
-      filename: 'styles.css'
-    })
+    MiniCssExtractPluginConfig
   ],
   module: {
     rules: [
