@@ -19,8 +19,8 @@ class RowColumnSelector extends React.Component {
 
     return (
       <div>
-        <label>{this.props.label}</label>
-        <select>
+        <label htmlFor="rcSelector">{this.props.label}</label>
+        <select id="rcSelector">
           {generateOptions}
         </select>
       </div>

@@ -7,10 +7,14 @@ exports[`RowColumnSelector Component Renders 1`] = `
   size={10}
 >
   <div>
-    <label>
+    <label
+      htmlFor="rcSelector"
+    >
       Test
     </label>
-    <select>
+    <select
+      id="rcSelector"
+    >
       <option
         key="0"
         value={1}
