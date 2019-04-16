@@ -24,8 +24,8 @@ class Tile extends React.Component {
 }
 
 Tile.propTypes = {
-  row: PropTypes.string.isRequired,
-  col: PropTypes.string.isRequired
+  row: PropTypes.number.isRequired,
+  col: PropTypes.number.isRequired
 };
 
 export default Tile;

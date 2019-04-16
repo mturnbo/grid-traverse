@@ -1,5 +1,11 @@
 # Grid Traversal Demo
 
+#### v.0.4.0
+* *Update*: Updated Formula component
+
+#### v.0.2.0
+* *Dependencies*: Upgraded dependencies
+
 #### v.0.1.9
 * *Feature*: Save selected tiles in Grid component state
 

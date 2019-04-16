@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Tile from 'components/Tile';
 import './Grid.scss';
-import PropTypes from "prop-types";
 
 class Grid extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Grid extends React.Component {
   }
 
   updateSelectedTiles(tile) {
-    let tiles = this.state.selectedTiles;
+    const tiles = this.state.selectedTiles;
     const tileSelected = tiles.some(t => t.row === tile.row && t.col === tile.col);
 
     if (tileSelected) {
@@ -35,11 +35,13 @@ class Grid extends React.Component {
   }
 
   render() {
-    const generateTiles = (row, cols) => [...Array(cols)].map((item, index) => <Tile row={row} col={index + 1} handler={this.updateSelectedTiles} />);
-
+    const generateRow = (row, cols) =>
+      [...Array(cols)].map((item, index) =>
+        <Tile row={row} col={index + 1} handler={this.updateSelectedTiles} />);
+    const { rows, cols } = this.props;
     return (
       <div className="grid">
-        {[...Array(this.props.rows)].map((r, i) => <div className="row">{generateTiles(i + 1, this.props.cols)}</div>)}
+        {[...Array(rows)].map((r, i) => <div className="row">{generateRow(i + 1, cols)}</div>)}
       </div>
     );
   }

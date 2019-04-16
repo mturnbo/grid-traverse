@@ -2,7 +2,7 @@
   "name": "grid-traverse",
   "description": "Grid traversal demo",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -61,8 +61,9 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server",
     "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js .",
-    "test": "jest --config=jest.config.json",
-    "test:clear": "jest --updateSnapshot"
+    "test": "jest --config=jest.config.json --coverage",
+    "test:update": "jest --config=jest.config.json --update-snapshot",
+    "test:watch": "jest --config=jest.config.json --coverage --watchAll"
   },
   "main": "src/index.js"
 }

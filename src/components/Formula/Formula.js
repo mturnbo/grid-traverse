@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MathJax from 'react-mathjax';
-import Combo from '../../combos.js';
 
-const Formula = (props) => {
+const combo = (start, end) => {
+  const factorial = n => (n === 0 ? 1 : n * factorial(n - 1));
+  const numElements = end[0] - start[0] + end[1] - start[1];
+  const numDirections = 2;
+  return factorial(numElements) / (factorial(numDirections) * factorial(numElements - numDirections))
+};
+
+const Formula = ({ n, k, s }) => {
   const formula = 'C_k(n) = {n! \\over k!(n - k)!}';
-  const answer = Combo([1,1],[5,3]);
-  const solution = `C_${props.k}(${props.n}) = {${props.n}! \\over ${props.k}!(${props.n} - ${props.k})!} = ${answer}`;
+  const answer = combo([1,1],[5,3]);
+  const solution = `C_${k}(${n}) = {${n}! \\over ${k}!(${n} - ${k})!} = ${answer}`;
 
   return (
     <MathJax.Provider>
