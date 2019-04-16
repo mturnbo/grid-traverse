@@ -1,31 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Tile.scss';
 
-class Tile extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {active: false};
-    this.toggleActive = this.toggleActive.bind(this);
-  }
+const Tile = ({ row, col, handler }) => {
+  const [active, setActive] = useState(false);
 
-  toggleActive(r, c) {
-    let selected = this.props.handler({row: r, col: c});
-    this.setState({active: selected});
-  }
+  const toggleActive = (r, c) => {
+    const selected = handler({ row: r, col: c });
+    return setActive(selected);
+  };
 
-  render() {
-    return (
-      <div className={'tile' + (this.state.active ? ' tile-selected' : '')} data-row={this.props.row} data-col={this.props.col} onClick={() => this.toggleActive(this.props.row, this.props.col)}>
-        {this.props.row}:{this.props.col}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={'tile' + (active ? ' tile-selected' : '')} data-row={row} data-col={col} onClick={() => toggleActive(row, col)}>
+      {row}:{col}
+    </div>
+  );
+};
 
 Tile.propTypes = {
   row: PropTypes.number.isRequired,
-  col: PropTypes.number.isRequired
+  col: PropTypes.number.isRequired,
+  handler: PropTypes.func.isRequired
 };
 
 export default Tile;
