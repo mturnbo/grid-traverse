@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.0.6.0
+* *Feature*: Added Combinations component.  Removed Formula component.
+
 #### v.0.4.0
 * *Update*: Updated Formula component
 

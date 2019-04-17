@@ -14,6 +14,7 @@ class Grid extends React.Component {
 
   updateSelectedTiles(tile) {
     const tiles = this.state.selectedTiles;
+    const { onSelectedTileUpdate } = this.props;
     const tileSelected = tiles.some(t => t.row === tile.row && t.col === tile.col);
 
     if (tileSelected) {
@@ -28,6 +29,7 @@ class Grid extends React.Component {
       this.setState({
         selectedTiles: tiles
       });
+      onSelectedTileUpdate(tiles);
       return true;
     }
 
@@ -49,7 +51,8 @@ class Grid extends React.Component {
 
 Grid.propTypes = {
   rows: PropTypes.number.isRequired,
-  cols: PropTypes.number.isRequired
+  cols: PropTypes.number.isRequired,
+  onSelectedTileUpdate: PropTypes.func
 };
 
 export default Grid;
