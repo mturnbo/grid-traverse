@@ -2,7 +2,7 @@
   "name": "grid-traverse",
   "description": "Grid traversal demo",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "jest-enzyme": "^7.0.2",
     "jshint": "^2.10.2",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "prettier": "1.16.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -54,7 +54,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-mathjax": "^1.0.1"
+    "react-mathjax": "^1.0.1",
+    "uikit": "^3.1.0"
   },
   "scripts": {
     "dev": "webpack --mode development",

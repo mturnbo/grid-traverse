@@ -1,17 +1,30 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useStateValue } from '../../state';
 import './Tile.scss';
 
-const Tile = ({ row, col, handler }) => {
-  const [active, setActive] = useState(false);
+const Tile = ({ row, col }) => {
+  const [{ selectedTiles }, dispatch] = useStateValue();
+
+  const isActive = !!selectedTiles.filter(t => t.row === row && t.col === col).length;
 
   const toggleActive = (r, c) => {
-    const selected = handler({ row: r, col: c });
-    return setActive(selected);
+    dispatch({
+      type: 'updateSelectedTiles',
+      tile: {
+        row: r,
+        col: c
+      }
+    });
   };
 
   return (
-    <div className={'tile' + (active ? ' tile-selected' : '')} data-row={row} data-col={col} onClick={() => toggleActive(row, col)}>
+    <div
+      className={'tile' + (isActive ? ' tile-selected' : '')}
+      data-row={row}
+      data-col={col}
+      onClick={() => toggleActive(row, col)}
+    >
       {row}:{col}
     </div>
   );
@@ -19,8 +32,7 @@ const Tile = ({ row, col, handler }) => {
 
 Tile.propTypes = {
   row: PropTypes.number.isRequired,
-  col: PropTypes.number.isRequired,
-  handler: PropTypes.func.isRequired
+  col: PropTypes.number.isRequired
 };
 
 export default Tile;

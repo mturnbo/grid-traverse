@@ -1,5 +1,8 @@
 # Grid Traversal Demo
 
+#### v.1.0.0
+* *Feature*: Updated state management to use Context API
+
 #### v.0.6.0
 * *Feature*: Added Combinations component.  Removed Formula component.
 
